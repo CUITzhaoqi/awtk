@@ -129,6 +129,7 @@ CPPPATH=[TK_ROOT,
   joinPath(TK_3RD_ROOT, 'agge/include'), 
   joinPath(TK_3RD_ROOT, 'gpinyin/include'), 
   joinPath(TK_3RD_ROOT, 'libunibreak'), 
+  joinPath(TK_3RD_ROOT, 'qrencode'),
   TK_TOOLS_ROOT] + OS_CPPPATH
 
 DefaultEnvironment(CCFLAGS = CCFLAGS, 
@@ -157,6 +158,7 @@ SConscriptFiles=NANOVG_BACKEND_PROJS + [
   '3rd/glad/SConscript',
   '3rd/gpinyin/SConscript', 
   '3rd/libunibreak/SConscript',
+  '3rd/qrencode/SConscript',
   'src/SConscript',
   'tools/common/SConscript', 
   'tools/theme_gen/SConscript', 
