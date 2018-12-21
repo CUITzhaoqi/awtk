@@ -55,6 +55,7 @@
 #include "base/window_manager.h"
 #include "base/widget_factory.h"
 #include "widgets/calibration_win.h"
+#include "widgets/qr.h"
 
 static widget_factory_t* s_widget_factory = NULL;
 typedef struct _creator_item_t {
@@ -94,7 +95,8 @@ static const creator_item_t s_builtin_creators[] = {
     {WIDGET_TYPE_APP_BAR, app_bar_create},
     {WIDGET_TYPE_SYSTEM_BAR, system_bar_create},
     {WIDGET_TYPE_CALIBRATION_WIN, calibration_win_create},
-    {WIDGET_TYPE_COLOR_TILE, color_tile_create}};
+    {WIDGET_TYPE_COLOR_TILE, color_tile_create},
+    {WIDGET_TYPE_QR, qr_create}};
 
 static const creator_item_t* widget_factory_find_builtin_creator(const char* type) {
   uint32_t i = 0;

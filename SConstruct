@@ -107,7 +107,7 @@ elif OS_NAME == 'Windows':
 LINKFLAGS=OS_LINKFLAGS;
 LIBPATH=[LIB_DIR] + OS_LIBPATH
 CCFLAGS=OS_FLAGS + COMMON_CCFLAGS 
-LIBS=['awtk', 'gpinyin', 'awtk', 'linebreak'] + NANOVG_BACKEND_LIBS + ['nanovg', 'SDL2', 'glad'] + OS_LIBS
+LIBS=['awtk', 'gpinyin', 'awtk', 'linebreak', 'qrencode'] + NANOVG_BACKEND_LIBS + ['nanovg', 'SDL2', 'glad'] + OS_LIBS
 
 CPPPATH=[TK_ROOT, 
   TK_SRC, 

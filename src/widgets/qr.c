@@ -91,7 +91,6 @@ ret_t qr_set_pixsize(widget_t* widget, uint8_t pixsize)
 }
 
 static ret_t qr_on_paint_self(widget_t* widget, canvas_t* c) {
-  // if (style_is_valid(widget->astyle)) {
   log_debug("test!");
   qr_t* qr = QR(widget);
   if (qr->qr_text != NULL) {
@@ -127,6 +126,12 @@ static ret_t qr_on_paint_self(widget_t* widget, canvas_t* c) {
   return RET_OK;
 }
 
+static ret_t qr_on_paint_border(widget_t* widget, canvas_t* c) {
+  log_debug("\r\ntest2\r\n");
+
+  return RET_OK;
+}
+
 static const char* s_qr_properties[] = {WIDGET_PROP_REPEAT, NULL};
 static const widget_vtable_t s_qr_vtable = {.size = sizeof(qr_t),
                                                 .type = WIDGET_TYPE_QR,
@@ -137,6 +142,7 @@ static const widget_vtable_t s_qr_vtable = {.size = sizeof(qr_t),
                                                 .set_prop = qr_set_prop,
                                                 .get_prop = qr_get_prop,
                                                 .destroy = qr_destroy,
+                                                .on_paint_border = qr_on_paint_border,
                                                 .on_paint_self = qr_on_paint_self};
 
 widget_t* qr_create(widget_t* parent, xy_t x, xy_t y, wh_t w, wh_t h) {
