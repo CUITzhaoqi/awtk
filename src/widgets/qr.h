@@ -23,6 +23,7 @@
 #define TK_QR_H
 
 #include "base/widget.h"
+#include "qrencode/qrencode.h"
 
 BEGIN_C_DECLS
 
@@ -38,8 +39,25 @@ typedef struct _qr_t {
    * 二维码每个像素在屏幕上的实际像素
    * (取值范围1-8)
    */
+  QRcode *qr_code_data;
+  /**
+   * 二维码每个像素在屏幕上的实际像素
+   * (取值范围1-8)
+   */
   uint8_t pix_size;
+  /**
+   * 二维码内容
+   */
   char *  qr_text;
+  /**
+   * 二维码宽度
+   */
+  uint16_t qr_width;
+  /**
+   * 二维码状态
+   * (是否被扫描)
+   */
+  bool_t  scaned;
   /*private*/
   int32_t timer_id;
   int32_t repeat_nr;
