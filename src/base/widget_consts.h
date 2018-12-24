@@ -624,6 +624,12 @@ BEGIN_C_DECLS
 #define WIDGET_PROP_DELAY "delay"
 
 /**
+ * @const WIDGET_PROP_PIX_SIZE
+ * 二维码像素映射关系
+ */
+#define WIDGET_PROP_PIX_SIZE "pix_size"
+
+/**
  * @enum widget_type_t
  * @annotation ["scriptable", "string"]
  * @prefix WIDGET_TYPE_
@@ -999,7 +1005,11 @@ typedef enum _widget_state_t {
    * 选中状态。
    */
   WIDGET_STATE_SELECTED = 10,
-
+  /**
+   * @const WIDGET_STATE_SCANED
+   * 二维码被扫描。
+   */
+  WIDGET_STATE_SCANED = 11,
   /*for active/selected/current */
   /**
    * @const WIDGET_STATE_NORMAL_OF_CHECKED

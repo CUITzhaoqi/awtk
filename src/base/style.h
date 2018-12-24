@@ -158,6 +158,11 @@ typedef enum _style_id_t {
    * 圆角半径(仅在WITH_VGCANVAS定义时生效)。
    */
   STYLE_ID_ROUND_RADIUS,
+  /**
+   * @const STYLE_ID_MARGIN_COLOR
+   * 边距范围内的颜色。
+   */
+  STYLE_ID_MARGIN_COLOR,
 } style_id_t;
 
 struct _style_t;
