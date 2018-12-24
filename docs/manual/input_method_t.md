@@ -12,9 +12,9 @@
 
 | 名属性称 | 类型 | 说明 | 
 | -------- | ----- | ------------ | 
-| <a href="#input_method_t_action_button_enable">action\_button\_enable</a> | bool_t |  软键盘的上的action按钮是否可用。 |
-| <a href="#input_method_t_action_button_enable">action\_button\_enable</a> | bool_t |  软键盘的上的action按钮文本。 |
-| <a href="#input_method_t_input_type">input\_type</a> | input_type_t |  当前输入的类型。 |
+| <a href="#input_method_t_action_button_enable">action\_button\_enable</a> | bool\_t | 软键盘的上的action按钮是否可用。 |
+| <a href="#input_method_t_action_button_enable">action\_button\_enable</a> | bool\_t | 软键盘的上的action按钮文本。 |
+| <a href="#input_method_t_input_type">input\_type</a> | input\_type\_t | 当前输入的类型。 |
 ### 事件
 <p id="input_method_t_events">
 
@@ -22,7 +22,7 @@
 | -------- | ----- | ------- | 
 #### action\_button\_enable 属性
 -----------------------
-<p id="input_method_t_action_button_enable"> 软键盘的上的action按钮是否可用。
+> <p id="input_method_t_action_button_enable"> 软键盘的上的action按钮是否可用。
 
 
 
@@ -40,7 +40,7 @@
 | 支通过widget_set_prop修改 | 否 |
 #### action\_button\_enable 属性
 -----------------------
-<p id="input_method_t_action_button_enable"> 软键盘的上的action按钮文本。
+> <p id="input_method_t_action_button_enable"> 软键盘的上的action按钮文本。
 
 
 
@@ -58,7 +58,7 @@
 | 支通过widget_set_prop修改 | 否 |
 #### input\_type 属性
 -----------------------
-<p id="input_method_t_input_type"> 当前输入的类型。
+> <p id="input_method_t_input_type"> 当前输入的类型。
 
 
 

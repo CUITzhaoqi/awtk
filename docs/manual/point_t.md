@@ -12,8 +12,8 @@
 
 | 名属性称 | 类型 | 说明 | 
 | -------- | ----- | ------------ | 
-| <a href="#point_t_x">x</a> | xy_t |  x坐标。 |
-| <a href="#point_t_y">y</a> | xy_t |  y坐标。 |
+| <a href="#point_t_x">x</a> | xy\_t | x坐标。 |
+| <a href="#point_t_y">y</a> | xy\_t | y坐标。 |
 ### 事件
 <p id="point_t_events">
 
@@ -21,7 +21,7 @@
 | -------- | ----- | ------- | 
 #### x 属性
 -----------------------
-<p id="point_t_x"> x坐标。
+> <p id="point_t_x"> x坐标。
 
 
 
@@ -39,7 +39,7 @@
 | 支通过widget_set_prop修改 | 否 |
 #### y 属性
 -----------------------
-<p id="point_t_y"> y坐标。
+> <p id="point_t_y"> y坐标。
 
 
 

@@ -60,9 +60,11 @@ typedef ret_t (*widget_on_add_child_t)(widget_t* widget, widget_t* child);
 typedef ret_t (*widget_on_remove_child_t)(widget_t* widget, widget_t* child);
 typedef ret_t (*widget_on_layout_children_t)(widget_t* widget);
 typedef ret_t (*widget_get_prop_t)(widget_t* widget, const char* name, value_t* v);
+typedef ret_t (*widget_get_prop_default_value_t)(widget_t* widget, const char* name, value_t* v);
 typedef ret_t (*widget_set_prop_t)(widget_t* widget, const char* name, const value_t* v);
 typedef widget_t* (*widget_find_target_t)(widget_t* widget, xy_t x, xy_t y);
 typedef widget_t* (*widget_create_t)(widget_t* parent, xy_t x, xy_t y, wh_t w, wh_t h);
+typedef ret_t (*widget_recycle_t)(widget_t* widget);
 typedef ret_t (*widget_destroy_t)(widget_t* widget);
 
 typedef struct _widget_vtable_t {
@@ -87,6 +89,7 @@ typedef struct _widget_vtable_t {
 
   widget_create_t create;
   widget_get_prop_t get_prop;
+  widget_get_prop_default_value_t get_prop_default_value;
   widget_set_prop_t set_prop;
   widget_on_keyup_t on_keyup;
   widget_on_keydown_t on_keydown;
@@ -105,6 +108,7 @@ typedef struct _widget_vtable_t {
   widget_on_remove_child_t on_remove_child;
   widget_on_event_t on_event;
   widget_find_target_t find_target;
+  widget_recycle_t recycle;
   widget_destroy_t destroy;
 } widget_vtable_t;
 
@@ -195,7 +199,7 @@ struct _widget_t {
    * @annotation ["set_prop","get_prop","readable","persitent","design","scriptable"]
    * style的名称。
    */
-  const char* style;
+  char* style;
   /**
    * @property {char*} animation
    * @annotation ["set_prop","get_prop","readable","persitent","design","scriptable"]
@@ -1049,18 +1053,29 @@ ret_t widget_dispatch(widget_t* widget, event_t* e);
 
 /**
  * @method widget_get_prop
- * 通用的获取控件属性的函数。
+ * 获取控件指定属性的值。
  * @param {widget_t*} widget 控件对象。
  * @param {const char*} name 属性的名称。
- * @param {value_t*} v 属性的值。
+ * @param {value_t*} v 返回属性的值。
  *
  * @return {ret_t} 返回RET_OK表示成功，否则表示失败。
  */
 ret_t widget_get_prop(widget_t* widget, const char* name, value_t* v);
 
 /**
+ * @method widget_get_prop_default_value
+ * 获取控件指定属性的缺省值(在持久化控件时，无需保存缺省值)。
+ * @param {widget_t*} widget 控件对象。
+ * @param {const char*} name 属性的名称。
+ * @param {value_t*} v 返回属性的缺省值。
+ *
+ * @return {ret_t} 返回RET_OK表示成功，否则表示失败。
+ */
+ret_t widget_get_prop_default_value(widget_t* widget, const char* name, value_t* v);
+
+/**
  * @method widget_set_prop
- * 通用的设置控件属性的函数。
+ * 设置控件指定属性的值。
  * @param {widget_t*} widget 控件对象。
  * @param {const char*} name 属性的名称。
  * @param {value_t*} v 属性的值。

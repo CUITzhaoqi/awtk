@@ -12,10 +12,10 @@
 
 | 名属性称 | 类型 | 说明 | 
 | -------- | ----- | ------------ | 
-| <a href="#rect_t_h">h</a> | wh_t |  高度。 |
-| <a href="#rect_t_w">w</a> | wh_t |  宽度。 |
-| <a href="#rect_t_x">x</a> | xy_t |  x坐标。 |
-| <a href="#rect_t_y">y</a> | xy_t |  y坐标。 |
+| <a href="#rect_t_h">h</a> | wh\_t | 高度。 |
+| <a href="#rect_t_w">w</a> | wh\_t | 宽度。 |
+| <a href="#rect_t_x">x</a> | xy\_t | x坐标。 |
+| <a href="#rect_t_y">y</a> | xy\_t | y坐标。 |
 ### 事件
 <p id="rect_t_events">
 
@@ -23,7 +23,7 @@
 | -------- | ----- | ------- | 
 #### h 属性
 -----------------------
-<p id="rect_t_h"> 高度。
+> <p id="rect_t_h"> 高度。
 
 
 
@@ -41,7 +41,7 @@
 | 支通过widget_set_prop修改 | 否 |
 #### w 属性
 -----------------------
-<p id="rect_t_w"> 宽度。
+> <p id="rect_t_w"> 宽度。
 
 
 
@@ -59,7 +59,7 @@
 | 支通过widget_set_prop修改 | 否 |
 #### x 属性
 -----------------------
-<p id="rect_t_x"> x坐标。
+> <p id="rect_t_x"> x坐标。
 
 
 
@@ -77,7 +77,7 @@
 | 支通过widget_set_prop修改 | 否 |
 #### y 属性
 -----------------------
-<p id="rect_t_y"> y坐标。
+> <p id="rect_t_y"> y坐标。
 
 
 

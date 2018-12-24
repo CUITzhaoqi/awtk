@@ -9,8 +9,8 @@
 
 | 函数名称 | 说明 | 
 | -------- | ------------ | 
-| <a href="#time_now_t_time_now_ms">time\_now\_ms</a> |  获取当前时间(毫秒)。 |
-| <a href="#time_now_t_time_now_s">time\_now\_s</a> |  获取当前时间(秒)。 |
+| <a href="#time_now_t_time_now_ms">time\_now\_ms</a> | 获取当前时间(毫秒)。 |
+| <a href="#time_now_t_time_now_s">time\_now\_s</a> | 获取当前时间(秒)。 |
 ### 属性
 <p id="time_now_t_properties">
 
@@ -24,22 +24,42 @@
 #### time\_now\_ms 函数
 -----------------------
 
+* 函数功能：
+
+> <p id="time_now_t_time_now_ms"> 获取当前时间(毫秒)。
+
+
+
+
+* 函数原型：
+
+```
+uint32_t time_now_ms ();
+```
+
+* 参数说明：
+
 | 参数 | 类型 | 说明 |
 | -------- | ----- | --------- |
 | 返回值 | uint32\_t | 返回当前时间(毫秒)。 |
-<p id="time_now_t_time_now_ms"> 获取当前时间(毫秒)。
-
-
-
-
 #### time\_now\_s 函数
 -----------------------
+
+* 函数功能：
+
+> <p id="time_now_t_time_now_s"> 获取当前时间(秒)。
+
+
+
+
+* 函数原型：
+
+```
+uint32_t time_now_s ();
+```
+
+* 参数说明：
 
 | 参数 | 类型 | 说明 |
 | -------- | ----- | --------- |
 | 返回值 | uint32\_t | 返回当前时间(秒)。 |
-<p id="time_now_t_time_now_s"> 获取当前时间(秒)。
-
-
-
-

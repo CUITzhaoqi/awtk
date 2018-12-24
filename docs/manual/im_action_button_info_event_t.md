@@ -1,8 +1,8 @@
 ## im\_action\_button\_info\_event\_t
 ### 概述
- 设置软键盘上的action按钮的信息事件。
-
 ![image](images/im_action_button_info_event_t_0.png)
+
+ 设置软键盘上的action按钮的信息事件。
 
 ### 函数
 <p id="im_action_button_info_event_t_methods">
@@ -14,8 +14,8 @@
 
 | 名属性称 | 类型 | 说明 | 
 | -------- | ----- | ------------ | 
-| <a href="#im_action_button_info_event_t_enable">enable</a> | bool_t |  软键盘上的action按钮启用。 |
-| <a href="#im_action_button_info_event_t_text">text</a> | char* |  软键盘上的action按钮显示的文本。 |
+| <a href="#im_action_button_info_event_t_enable">enable</a> | bool\_t | 软键盘上的action按钮启用。 |
+| <a href="#im_action_button_info_event_t_text">text</a> | char* | 软键盘上的action按钮显示的文本。 |
 ### 事件
 <p id="im_action_button_info_event_t_events">
 
@@ -23,7 +23,7 @@
 | -------- | ----- | ------- | 
 #### enable 属性
 -----------------------
-<p id="im_action_button_info_event_t_enable"> 软键盘上的action按钮启用。
+> <p id="im_action_button_info_event_t_enable"> 软键盘上的action按钮启用。
 
 
 
@@ -41,7 +41,7 @@
 | 支通过widget_set_prop修改 | 否 |
 #### text 属性
 -----------------------
-<p id="im_action_button_info_event_t_text"> 软键盘上的action按钮显示的文本。
+> <p id="im_action_button_info_event_t_text"> 软键盘上的action按钮显示的文本。
 
 
 

@@ -1,5 +1,18 @@
 # 最新动态
 
+* 2018/12/23
+  * 优化。
+  * 整理控件API文档：spin\_box/combo\_box
+  * 增加combo\_box的C示例代码。
+
+* 2018/12/22
+  * 修改combobox事件的BUG(issue #62)。
+  * 增加函数widgeti\_get\_prop\_default\_value。
+  * 增加widget\_recycle函数，支持控件回收，提高运行速度，减少内存碎片。
+
+* 2018/12/21
+  * 整理控件API文档：button/label/image/edit
+
 * 2018/12/20
   * 重新设计layouter的架构，把layouter分成self\_layouter和children\_layouter两个接口，方便扩展支持不同的布局方式(如css flex)。
   * 更新layout的文档，为了保持兼容，旧的layout属性仍然支持，新的代码请参考新的文档[layout](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
